@@ -492,6 +492,7 @@ const BASE_LAYOUT_MAPPING = {
 };
 
 const gKeyboardLayouts: KeyboardLayout[] = [];
+const gKeyboardLayoutsIDs: KeyboardLayoutId[] = [];
 
 export let gKeyboardLayout: KeyboardLayout | undefined;
 
@@ -510,8 +511,10 @@ export function platform(): 'apple' | 'windows' | 'linux' {
 }
 
 export function register(layout: KeyboardLayout): void {
-  if (!layout.platform || layout.platform === platform())
+  if (!layout.platform || layout.platform === platform()) {
     gKeyboardLayouts.push(layout);
+    gKeyboardLayoutsIDs.push(layout.id);
+  }
 }
 
 /** Given the current estimated keyboard layout,
@@ -648,7 +651,13 @@ export function validateKeyboardLayout(evt?: KeyboardEvent): void {
     }
   }
 
-  gKeyboardLayouts.sort((a, b) => b.score - a.score);
+  gKeyboardLayouts.sort((a, b) =>
+    b.score === a.score
+      ? // sort by original order when the score is equal
+        gKeyboardLayoutsIDs.indexOf(a.id) - gKeyboardLayoutsIDs.indexOf(b.id)
+      : // sort by decreasing score
+        b.score - a.score
+  );
 }
 
 export function setKeyboardLayoutLocale(locale: string): void {
