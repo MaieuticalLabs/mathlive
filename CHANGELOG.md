@@ -1,3 +1,10 @@
+## [Unreleased]
+
+### Bug Fixes
+
+- MaieuticalLabs: **#1072** Changed the way the array of keyboard layouts was
+  sorted while discovering the more probable layout in use.
+
 ## 0.84.0 (2022-10-19)
 
 ### New Features
