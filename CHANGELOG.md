@@ -1,3 +1,12 @@
+## [Unreleased]
+
+### Bug Fixes
+
+- MaieuticalLabs: **#1072** Changed the way the array of keyboard layouts was
+  sorted while discovering the more probable layout in use.
+- MaieuticalLabs: **#1087** Normalized scrolling behavior of math-field between
+  physical keyboard and virtual keyboard for arrow keys. 
+
 ## 0.68.1 (2021-06-02)
 
 ### Improvements
