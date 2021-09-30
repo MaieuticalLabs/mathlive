@@ -1,5 +1,5 @@
 {
-  "name": "mathlive",
+  "name": "@maieuticallabs/mathlive",
   "version": "0.68.1",
   "description": "Render and edit beautifully typeset math",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnog/mathlive.git"
+    "url": "https://github.com/MaieuticalLabs/mathlive"
   },
   "bugs": "https://github.com/arnog/mathlive/issues/",
   "scripts": {

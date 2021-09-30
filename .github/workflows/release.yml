@@ -1,0 +1,24 @@
+name: Node.js Package
+on:
+  release:
+    types: [published]
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      # This will otherwise prevent npm from reading the .npmrc written by
+      # the `setup-node` step
+      - run: rm /home/runner/work/mathlive/mathlive/.npmrc
+      # Mark the package as public
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
