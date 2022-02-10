@@ -28,6 +28,7 @@ export class GroupAtom extends Atom {
       style?: Style;
       captureSelection?: boolean;
       serialize?: (atom: GroupAtom, options: ToLatexOptions) => string;
+      command?: string;
     }
   ) {
     super('group', {
