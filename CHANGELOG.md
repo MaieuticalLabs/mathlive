@@ -1,5 +1,6 @@
-## 0.69.6-ML (2021-10-20)
+## 0.69.6-ML-2 (202-02-14)
 ### Bug Fixes
+- Cherry-pick PR #1336 https://github.com/arnog/mathlive/pull/1336 fixes bug #1024
 
 - MaieuticalLabs: **#1072** Changed the way the array of keyboard layouts was
   sorted while discovering the more probable layout in use.
