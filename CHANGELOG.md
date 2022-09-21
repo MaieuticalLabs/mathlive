@@ -1,3 +1,7 @@
+## 0.69.6-ML-3 (2022-09-21)
+### Bug Fixes
+- Fix \ne disappearance after using setValue.
+
 ## 0.69.6-ML-2 (202-02-14)
 ### Bug Fixes
 - Cherry-pick PR #1336 https://github.com/arnog/mathlive/pull/1336 fixes bug #1024
