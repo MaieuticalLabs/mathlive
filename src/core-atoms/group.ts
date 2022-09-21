@@ -37,6 +37,7 @@ export class GroupAtom extends Atom {
       style: options?.style,
       displayContainsHighlight: true,
     });
+    this.command = options?.command;
     this.body = arg;
     this.mathstyleName = options?.mathstyleName;
 
