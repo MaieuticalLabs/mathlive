@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## 0.84.0-ML-1 (2022-11-04)
+
 ### Bug Fixes
 
 - MaieuticalLabs: **#1072** Changed the way the array of keyboard layouts was
